@@ -25,3 +25,41 @@ __pycache__/
 *.pyc
 .DS_Store
 
+
+# System
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs und Temp
+*.log
+*.tmp
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Docker / lokal
+.env
+.env.local
+.env.*.local
+docker-compose.override.yml
+
+# Datenbanken und Dumps
+*.sqlite
+*.sqlite3
+*.db
+dumps/
