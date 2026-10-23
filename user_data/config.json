@@ -58,7 +58,7 @@
         },
         {
             "method": "PriceFilter",
-            "min_price": 0.00000001
+            "min_price": 1e-08
         },
         {
             "method": "VolatilityFilter",
@@ -74,8 +74,8 @@
     ],
     "telegram": {
         "enabled": true,
-        "token": "8609343854:AAGur9mJLVd5ybV88U46rrTCnjN0ekrSY8Y",
-        "chat_id": "7566397038",
+        "token": "<per .env setzen>",
+        "chat_id": "<per .env setzen>",
         "allow_custom_messages": true,
         "reload": true,
         "notification_settings": {
@@ -100,11 +100,11 @@
         "listen_port": 8080,
         "verbosity": "error",
         "enable_openapi": false,
-        "jwt_secret_key": "wird_per_env_variable_ueberschrieben",
+        "jwt_secret_key": "<per .env setzen>",
         "CORS_origins": [],
         "username": "wird_per_env_variable_ueberschrieben",
-        "password": "wird_per_env_variable_ueberschrieben",
-        "ws_token": "wird_per_env_variable_ueberschrieben"
+        "password": "<per .env setzen>",
+        "ws_token": "<per .env setzen>"
     },
     "bot_name": "nas-timgreen01-quickscalp",
     "strategy": "QuickScalpStrategy",
