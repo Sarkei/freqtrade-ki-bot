@@ -1,0 +1,116 @@
+{
+    "$schema": "https://schema.freqtrade.io/schema.json",
+    "trading_mode": "spot",
+    "max_open_trades": 8,
+    "stake_currency": "USDT",
+    "stake_amount": 15,
+    "tradable_balance_ratio": 0.99,
+    "fiat_display_currency": "EUR",
+    "dry_run": true,
+    "dry_run_wallet": 1000,
+    "timeframe": "1m",
+    "cancel_open_orders_on_exit": true,
+    "unfilledtimeout": {
+        "entry": 2,
+        "exit": 5,
+        "unit": "minutes"
+    },
+    "exchange": {
+        "name": "binance",
+        "key": "",
+        "secret": "",
+        "enable_ws": true,
+        "ccxt_config": {},
+        "ccxt_async_config": {},
+        "pair_whitelist": [],
+        "pair_blacklist": [
+            "(USDC|FDUSD|TUSD|PAX|BUSD|USDP|RLUSD|USD1|XAUT|PAXG|EUR|GBP|BFUSD|XUSD|U)/USDT",
+            ".*(BULL|BEAR)/USDT",
+            "(CRCLB|MUB|NVDAB|SNDKB|TSLAB|SPCXB|SKHYB|SOXLB|KORUB|SNXXB|QQQB|EWYB|NBISB|AXTIB|DRAMB|MSTRB|MSFTB|GOOGLB|MUUB|INTCB)/USDT"
+        ]
+    },
+    "entry_pricing": {
+        "price_side": "other",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "exit_pricing": {
+        "price_side": "other",
+        "use_order_book": true,
+        "order_book_top": 1
+    },
+    "pairlists": [
+        {
+            "method": "VolumePairList",
+            "number_assets": 60,
+            "sort_key": "quoteVolume",
+            "min_value": 0,
+            "refresh_period": 180
+        },
+        {
+            "method": "AgeFilter",
+            "min_days_listed": 7
+        },
+        {
+            "method": "PriceFilter",
+            "min_price": 0.00000001
+        },
+        {
+            "method": "VolatilityFilter",
+            "lookback_days": 3,
+            "min_volatility": 0.008,
+            "max_volatility": 0.85,
+            "refresh_period": 1800
+        },
+        {
+            "method": "SpreadFilter",
+            "max_spread_ratio": 0.008
+        }
+    ],
+    "telegram": {
+        "enabled": true,
+        "token": "8609343854:AAGur9mJLVd5ybV88U46rrTCnjN0ekrSY8Y",
+        "chat_id": "7566397038",
+        "allow_custom_messages": true,
+        "reload": true,
+        "notification_settings": {
+            "status": "on",
+            "warning": "on",
+            "startup": "on",
+            "entry": "silent",
+            "entry_fill": "on",
+            "entry_cancel": "silent",
+            "exit": "silent",
+            "exit_fill": "on",
+            "exit_cancel": "silent",
+            "protection_trigger": "on",
+            "protection_trigger_global": "on",
+            "strategy_msg": "off",
+            "show_candle": "off"
+        }
+    },
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "0.0.0.0",
+        "listen_port": 8080,
+        "verbosity": "error",
+        "enable_openapi": false,
+        "jwt_secret_key": "wird_per_env_variable_ueberschrieben",
+        "CORS_origins": [],
+        "username": "wird_per_env_variable_ueberschrieben",
+        "password": "wird_per_env_variable_ueberschrieben",
+        "ws_token": "wird_per_env_variable_ueberschrieben"
+    },
+    "bot_name": "nas-timgreen01-quickscalp",
+    "strategy": "QuickScalpStrategy",
+    "force_entry_enable": true,
+    "initial_state": "running",
+    "internals": {
+        "process_throttle_secs": 1
+    }
+}
