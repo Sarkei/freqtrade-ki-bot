@@ -25,9 +25,7 @@ __pycache__/
 *.pyc
 .DS_Store
 
-
 # System
-.DS_Store
 Thumbs.db
 desktop.ini
 
@@ -42,7 +40,6 @@ desktop.ini
 *.tmp
 
 # Python
-__pycache__/
 *.py[cod]
 .venv/
 venv/
@@ -53,7 +50,6 @@ env/
 *.egg-info/
 
 # Docker / lokal
-.env
 .env.local
 .env.*.local
 docker-compose.override.yml
