@@ -1,0 +1,9 @@
+{
+  "last_processed_closed_trades": 21,
+  "last_run_timestamp": null,
+  "runs": 0,
+  "keep_streak": 0,
+  "settled": false,
+  "last_accepted_live_winrate": null,
+  "consecutive_failures": 0
+}
