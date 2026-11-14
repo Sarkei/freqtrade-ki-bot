@@ -1,0 +1,61 @@
+# Secrets / local env
+.env
+.env.*
+!.env.example
+env
+
+# Runtime / heavy artifacts
+user_data/logs/
+user_data/data/
+user_data/models/
+user_data/freqaimodels/
+user_data/hyperopt_results/
+user_data/hyperopts/
+user_data/plot/
+user_data/notebooks/
+user_data/backtest_results/
+user_data/*.sqlite
+user_data/*.sqlite-*
+user_data/tradesv3.sqlite*
+user_data/optimizer/state.json
+user_data/optimizer/optimizer.log
+user_data/optimizer/audit_log.jsonl
+user_data/optimizer/reports/
+__pycache__/
+*.pyc
+.DS_Store
+
+# System
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs und Temp
+*.log
+*.tmp
+
+# Python
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Docker / lokal
+.env.local
+.env.*.local
+docker-compose.override.yml
+
+# Datenbanken und Dumps
+*.sqlite
+*.sqlite3
+*.db
+dumps/
